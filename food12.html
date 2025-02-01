@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Recipes</title>
@@ -81,6 +80,10 @@
         button:hover {
             background-color: #d84315;
         }
+        .recipe-box iframe {
+            margin-left: 20px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -133,6 +136,7 @@
                     <button onclick="showIngredients('stuffed-rigatoni')">Show Ingredients</button>
                 </div>
             </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/1nH20k0Gssk?si=imSnDMo_mdXD818C" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <!-- Gnocchi Recipe -->
@@ -163,6 +167,7 @@
                     <button onclick="showIngredients('gnocchi')">Show Ingredients</button>
                 </div>
             </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/fLNWeEen35Y?si=IO8LdGxUe4UXTxBM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <!-- Caesar Salad Recipe -->
@@ -194,113 +199,115 @@
                         <li>Heat olive oil and butter in a pan and cook the garlic until fragrant.</li>
                         <li>Add the chicken breast and cook until fully cooked, then set aside and slice.</li>
                         <li>Toast the French baguette (or any bread) in the pan, then cut it into crouton-sized pieces.</li>
-                        <li>Mix the mayonnaise, parmesan cheese, oregano, thyme, salt, and pepper in a bowl to make the dressing.</li>
-                        <li>Take the iceberg lettuce and tear it into bite-sized pieces, then place it in a bowl.</li>
+                                                <li>Mix the mayonnaise, parmesan cheese, oregano, thyme, salt, and pepper in a bowl to make the dressing.</li>
+                        <li> Tear the iceberg lettuce into bite-sized pieces and place it in a bowl.</li>
                         <li>Add the chicken, croutons, and dressing to the lettuce, and toss everything together.</li>
                         <li>Enjoy your Caesar salad!</li>
                     </ol>
                     <button onclick="showIngredients('caesar-salad')">Show Ingredients</button>
                 </div>
             </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/SAMPLE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <!-- Garlic Parmesan Potato Wedges Recipe -->
         <div class="recipe-box" id="garlic-parmesan-potato-wedges">
-            <img src="OIP (3).jpeg" alt="Garlic Parmesan Potato Wedges">
+            <img src="garlic-parmesan-potato-wedges.jpg" alt="Garlic Parmesan Potato Wedges">
             <div>
-                <a href="javascript:void(0);" onclick="toggleRecipe('garlic-parmesan-potato-wedges')">Garlic Parmesan Potato Wedges Recipe</a>
+                <a href="javascript:void(0);" onclick="toggleRecipe('garlic-parmesan-potato-wedges')">Garlic Parmesan Potato Wedges</a>
                 <div id="garlic-parmesan-potato-wedges-ingredients" class="ingredients">
                     <h2>Ingredients:</h2>
                     <ul>
-                        <li>4 tbsp olive oil</li>
-                        <li>3 garlic cloves (crushed)</li>
-                        <li>1 chicken breast</li>
-                        <li>3 tbsp butter</li>
-                        <li>1/2 cup mayonnaise</li>
-                        <li>1/4 cup parmesan cheese</li>
-                        <li>French baguette (1 or any other bread)</li>
-                        <li>1/2 head iceberg lettuce</li>
-                        <li>Salt to taste</li>
-                        <li>1-2 tsp pepper</li>
-                        <li>1/2 tsp oregano</li>
-                        <li>1/2 tsp thyme</li>
+                        <li>4 large potatoes</li>
+                        <li>3 tbsp olive oil</li>
+                        <li>3 cloves garlic, minced</li>
+                        <li>1/2 cup grated parmesan cheese</li>
+                        <li>Salt and pepper to taste</li>
+                        <li>1 tsp dried oregano</li>
+                        <li>1 tsp garlic powder</li>
                     </ul>
                     <button onclick="showSteps('garlic-parmesan-potato-wedges')">See Steps</button>
                 </div>
                 <div id="garlic-parmesan-potato-wedges-steps" class="steps">
                     <h2>Steps:</h2>
                     <ol>
-                        <li>Cut the potatoes into wedges and mix them with olive oil.</li>
-                        <li>Season with your choice of spices.</li>
-                        <li>Bake at 400°F / 200°C for 40 minutes until golden brown and crispy.</li>
-                        <li>Enjoy your garlic parmesan potato wedges!</li>
+                        <li>Preheat the oven to 200°C (400°F) and line a baking sheet with parchment paper.</li>
+                        <li>Cut the potatoes into wedges and toss them in olive oil, minced garlic, parmesan, oregano, garlic powder, salt, and pepper.</li>
+                        <li>Arrange the wedges on the baking sheet in a single layer and bake for 30-40 minutes, flipping halfway through, until golden and crispy.</li>
+                        <li>Serve hot and enjoy!</li>
                     </ol>
                     <button onclick="showIngredients('garlic-parmesan-potato-wedges')">Show Ingredients</button>
                 </div>
             </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/1nH20k0Gssk?si=TRhXYqBAMm146NDI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <!-- Mandazi Recipe -->
         <div class="recipe-box" id="mandazi">
-            <img src="Screenshot 2025-02-01 141801.png" alt="Mandazi">
+            <img src="mandazi.jpg" alt="Mandazi">
             <div>
                 <a href="javascript:void(0);" onclick="toggleRecipe('mandazi')">Mandazi Recipe</a>
                 <div id="mandazi-ingredients" class="ingredients">
                     <h2>Ingredients:</h2>
                     <ul>
-                        <li>600g self-rising flour (or 600g all-purpose flour + 6 tsp baking powder)</li>
-                        <li>6 tbsp sugar</li>
-                        <li>1 tbsp soft butter</li>
-                        <li>2 eggs</li>
-                        <li>1 cup milk</li>
-                        <li>1-2 tbsp cinnamon powder</li>
+                        <li>2 cups all-purpose flour</li>
+                        <li>1/4 cup sugar</li>
+                        <li>1 tsp baking powder</li>
+                        <li>1/4 tsp salt</li>
+                        <li>1/2 tsp ground cardamom</li>
+                        <li>1/2 cup coconut milk</li>
+                        <li>1/4 cup warm water</li>
+                        <li>1 egg</li>
+                        <li>2 tbsp butter, melted</li>
+                        <li>Oil for frying</li>
                     </ul>
                     <button onclick="showSteps('mandazi')">See Steps</button>
                 </div>
                 <div id="mandazi-steps" class="steps">
                     <h2>Steps:</h2>
                     <ol>
-                        <li>Mix the flour, cinnamon, margarine (or butter), and sugar in a suitable bowl. Make sure the margarine is broken up into the flour.</li>
-                        <li>In a separate bowl, whisk the eggs into the milk. Make a well at the center of the flour and add the milk and egg mixture. Slowly mix to form a dough.</li>
-                        <li>Knead the dough for 3-4 minutes or until it stops sticking to the sides of the bowl and you have a smooth surface.</li>
-                        <li>Cover the dough with a damp cloth and allow it to rest for 15 minutes.</li>
-                        <li>Roll the dough on a lightly floured surface into a 1cm thick piece.</li>
-                        <li>Using a sharp knife, cut the dough into the desired size, setting it aside ready for deep frying.</li>
-                        <li>Heat oil in a suitable pot and gently dip the mandazi pieces to cook until light brown on the first side, then turn to cook on the second side.</li>
-                        <li>Serve them warm or cold.</li>
+                        <li>In a large bowl, mix the flour, sugar, baking powder, salt, and cardamom.</li>
+                        <li>Add the coconut milk, warm water, egg, and melted butter. Mix until a soft dough forms.</li>
+                        <li>Knead the dough for 5-7 minutes, then cover and let it rest for 30 minutes.</li>
+                        <li>Roll out the dough on a lightly floured surface and cut into small triangles or squares.</li>
+                        <li>Heat oil in a pan or deep fryer to 350°F (175°C) and fry the dough pieces until golden brown and crisp.</li>
+                        <li>Drain on paper towels and serve hot!</li>
                     </ol>
                     <button onclick="showIngredients('mandazi')">Show Ingredients</button>
                 </div>
             </div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/oWk0-7_hxZE?si=3L9MQHsEACzufBzr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
     </div>
 
     <script>
-        function showIngredients(recipeId) {
-            const ingredients = document.querySelector(`#${recipeId}-ingredients`);
-            const steps = document.querySelector(`#${recipeId}-steps`);
-            ingredients.style.display = 'block';
-            steps.style.display = 'none';
+        function toggleRecipe(recipeId) {
+            var ingredients = document.getElementById(recipeId + '-ingredients');
+            var steps = document.getElementById(recipeId + '-steps');
+            if (ingredients.style.display === 'none') {
+                ingredients.style.display = 'block';
+                steps.style.display = 'none';
+            } else {
+                ingredients.style.display = 'none';
+                steps.style.display = 'none';
+            }
         }
 
         function showSteps(recipeId) {
-            const ingredients = document.querySelector(`#${recipeId}-ingredients`);
-            const steps = document.querySelector(`#${recipeId}-steps`);
-            ingredients.style.display = 'none';
+            var ingredients = document.getElementById(recipeId + '-ingredients');
+            var steps = document.getElementById(recipeId + '-steps');
             steps.style.display = 'block';
+            ingredients.style.display = 'none';
         }
 
-        function toggleRecipe(recipeId) {
-            const ingredients = document.querySelector(`#${recipeId}-ingredients`);
-            const steps = document.querySelector(`#${recipeId}-steps`);
-            if (ingredients.style.display === 'block' || steps.style.display === 'block') {
-                ingredients.style.display = 'none';
-                steps.style.display = 'none';
-            } else {
-                ingredients.style.display = 'block';
-            }
+        function showIngredients(recipeId) {
+            var ingredients = document.getElementById(recipeId + '-ingredients');
+            var steps = document.getElementById(recipeId + '-steps');
+            ingredients.style.display = 'block';
+            steps.style.display = 'none';
         }
     </script>
 </body>
 </html>
+
