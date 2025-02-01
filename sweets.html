@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweets Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebcd;
+            text-align: center;
+        }
+        .header {
+            background-color: #f08080;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffcccb;
+            padding: 10px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #6a4f4b;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav a:hover {
+            color: #e74c3c;
+        }
+        .recipe-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            width: 90%;
+            max-width: 600px;
+            text-align: left;
+            margin: 10px auto;
+        }
+        .recipe-box img {
+            max-width: 120px;
+            max-height: 120px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .recipe-box a {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f08080;
+        }
+        .recipe-box a:hover {
+            color: #e74c3c;
+        }
+        .ingredients, .steps {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #f08080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Sweet Treats</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="sweets.html">Sweets</a>
+        <a href="food.html">Food</a>
+    </div>
+    <div class="content">
+        <h1>Delicious Desserts</h1>
+        <p>Discover your favorite sweet recipes.</p>
+
+        <!-- Chocolate Cake Rolls Recipe -->
+        <div class="recipe-box" id="chocolate-cake-rolls">
+            <img src="chocolate-cake-rolls.jpg" alt="Chocolate Cake Rolls">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('chocolate-cake-rolls')">Chocolate Cake Rolls</a>
+                <div id="chocolate-cake-rolls-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>3 eggs</li>
+                        <li>Vanilla</li>
+                        <li>100g (1⁄2 cup) sugar</li>
+                        <li>4 tbsp cocoa powder</li>
+                        <li>2-3 tbsp hot milk</li>
+                        <li>60g (1⁄2 cup + 1 tbsp) flour</li>
+                        <li>1 tsp baking powder</li>
+                        <li>1/4 tsp salt</li>
+                    </ul>
+                    <button onclick="showSteps('chocolate-cake-rolls')">See Steps</button>
+                </div>
+                <div id="chocolate-cake-rolls-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Stir eggs, vanilla, and sugar together. Whip eggs until doubled and light in color.</li>
+                        <li>Bloom cocoa powder with hot milk and add to the mixture.</li>
+                        <li>Add flour, baking powder, and salt, then mix them together.</li>
+                        <li>Pour mixture onto a parchment-lined baking sheet and bake at 160°C (320°F) for 10 minutes.</li>
+                        <li>After baking, roll the cake with powdered sugar and cornstarch to prevent sticking.</li>
+                        <li>Allow to cool and enjoy!</li>
+                    </ol>
+                    <button onclick="showIngredients('chocolate-cake-rolls')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donuts Recipe -->
+        <div class="recipe-box" id="donuts">
+            <img src="donuts.jpg" alt="Donuts">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('donuts')">Donuts</a>
+                <div id="donuts-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>1⁄2 cup (112g) milk</li>
+                        <li>1 cup (140g) flour</li>
+                        <li>1 1⁄2 tsp baking powder</li>
+                    </ul>
+                    <button onclick="showSteps('donuts')">See Steps</button>
+                </div>
+                <div id="donuts-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Mix all ingredients until the dough becomes sticky.</li>
+                        <li>Shape dough into small circles and fry until golden.</li>
+                        <li>Glaze the donuts and enjoy!</li>
+                    </ol>
+                    <button onclick="showIngredients('donuts')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chocolate Cupcakes Recipe -->
+        <div class="recipe-box" id="chocolate-cupcakes">
+            <img src="chocolate-cupcakes.jpg" alt="Chocolate Cupcakes">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('chocolate-cupcakes')">Chocolate Cupcakes</a>
+                <div id="chocolate-cupcakes-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>1 1/2 cups all-purpose flour</li>
+                        <li>1 1/2 cups granulated sugar</li>
+                        <li>3/4 cup unsweetened cocoa powder</li>
+                        <li>1 1/2 tsp baking soda</li>
+                        <li>3/4 tsp baking powder</li>
+                        <li>3/4 tsp salt</li>
+                        <li>2 large eggs</li>
+                        <li>3/4 cup buttermilk</li>
+                        <li>3/4 cup warm water</li>
+                        <li>1/4 cup vegetable oil</li>
+                        <li>1 tsp vanilla extract</li>
+                    </ul>
+                    <button onclick="showSteps('chocolate-cupcakes')">See Steps</button>
+                </div>
+                <div id="chocolate-cupcakes-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Mix dry ingredients in a stand mixer, then add wet ingredients. Beat until smooth.</li>
+                        <li>Fill cupcake liners 2/3 full and bake at 160°C for 20-22 minutes.</li>
+                        <li>Check with a toothpick to see if they’re done and allow to cool.</li>
+                    </ol>
+                    <button onclick="showIngredients('chocolate-cupcakes')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Choux Pastry Recipe -->
+        <div class="recipe-box" id="choux-pastry">
+            <img src="choux-pastry.jpg" alt="Choux Pastry">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('choux-pastry')">Choux Pastry</a>
+                <div id="choux-pastry-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>1/2 cup water</li>
+                        <li>1/2 cup whole milk</li>
+                        <li>8 tbsp unsalted butter</li>
+                        <li>1 tsp granulated sugar</li>
+                        <li>1/4 tsp salt</li>
+                        <li>1 cup all-purpose flour</li>
+                        <li>4 large eggs</li>
+                    </ul>
+                    <button onclick="showSteps('choux-pastry')">See Steps</button>
+                </div>
+                <div id="choux-pastry-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Bring water, milk, butter, sugar, and salt to a boil. Stir in flour.</ol>
+						                        <li>Cook the dough over medium heat for about two minutes to release extra moisture.</li>
+                        <li>Transfer the dough to a mixing bowl and cool it for about a minute.</li>
+                        <li>Add eggs one at a time, mixing well after each addition, until the dough is smooth.</li>
+                        <li>Spoon the dough onto a baking sheet and bake at 425°F (218°C), then reduce the temperature to 160°C for about 20 minutes, or until golden brown.</li>
+                    </ol>
+                    <button onclick="showIngredients('choux-pastry')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleRecipe(recipeId) {
+            let ingredients = document.getElementById(recipeId + '-ingredients');
+            let steps = document.getElementById(recipeId + '-steps');
+            if (ingredients.style.display === 'block') {
+                ingredients.style.display = 'none';
+                steps.style.display = 'none';
+            } else {
+                ingredients.style.display = 'block';
+                steps.style.display = 'none';
+            }
+        }
+
+        function showSteps(recipeId) {
+            let steps = document.getElementById(recipeId + '-steps');
+            let ingredients = document.getElementById(recipeId + '-ingredients');
+            ingredients.style.display = 'none';
+            steps.style.display = 'block';
+        }
+
+        function showIngredients(recipeId) {
+            let ingredients = document.getElementById(recipeId + '-ingredients');
+            let steps = document.getElementById(recipeId + '-steps');
+            steps.style.display = 'none';
+            ingredients.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

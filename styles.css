@@ -1,0 +1,129 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e68c;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    background-color: #ff8c00;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation bar styling */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ffcc80;
+    padding: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #4e342e;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    color: #d84315;
+}
+
+/* Main content box styling */
+.content {
+    margin-top: 20px;
+}
+
+/* Recipe box styling */
+.recipe-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe-box:hover {
+    transform: scale(1.05);
+}
+
+.recipe-box a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+.recipe-box a:hover {
+    color: #d84315;
+}
+
+/* Image styling beside the recipe name */
+.recipe-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Ingredients and steps section styling */
+.ingredients, .steps {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Active display when clicked */
+#gnocchi:target, #steps-gnocchi:target,
+#stuffed-rigatoni:target, #steps-stuffed-rigatoni:target,
+#caesar-salad:target, #steps-caesar-salad:target,
+#garlic-parmesan-potato-wedges:target, #steps-garlic-parmesan-potato-wedges:target,
+#mandazi:target, #steps-mandazi:target {
+    display: block;
+}
+
+/* Button style for See Steps and Show Ingredients */
+button {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d84315;
+}
+
+/* Recipe link styling */
+.recipe-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff8c00;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.recipe-link:hover {
+    background-color: #ffcc80;
+    color: #4e342e;
+}

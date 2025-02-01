@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e68c;
+            text-align: center;
+        }
+        .header {
+            background-color: #ff8c00;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffcc80;
+            padding: 10px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #4e342e;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav a:hover {
+            color: #d84315;
+        }
+        .recipe-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            width: 90%;
+            max-width: 600px;
+            text-align: left;
+            margin: 10px auto;
+        }
+        .recipe-box img {
+            max-width: 120px;
+            max-height: 120px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .recipe-box a {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff8c00;
+        }
+        .recipe-box a:hover {
+            color: #d84315;
+        }
+        .ingredients, .steps {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d84315;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Savory Foods</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="sweets.html">Sweets</a>
+        <a href="food.html">Food</a>
+    </div>
+    <div class="content">
+        <h1>Hearty & Delicious Meals</h1>
+        <p>Explore amazing food recipes.</p>
+
+        <!-- Stuffed Rigatoni Recipe -->
+        <div class="recipe-box" id="stuffed-rigatoni">
+            <img src="Screenshot 2025-02-01 132938.png" alt="Stuffed Rigatoni">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('stuffed-rigatoni')">Stuffed Rigatoni Recipe</a>
+                <div id="stuffed-rigatoni-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>Water and salt</li>
+                        <li>Rigatoni</li>
+                        <li>Olive oil</li>
+                        <li>Ground beef</li>
+                        <li>1 tsp salt</li>
+                        <li>1/2 tsp pepper</li>
+                        <li>1 tsp oregano</li>
+                        <li>1 tsp parsley</li>
+                        <li>1/2 onion</li>
+                        <li>2 cloves garlic</li>
+                        <li>1 cup mozzarella</li>
+                        <li>1 cup flour</li>
+                        <li>2 eggs</li>
+                        <li>1 cup bread crumbs</li>
+                    </ul>
+                    <button onclick="showSteps('stuffed-rigatoni')">See Steps</button>
+                </div>
+                <div id="stuffed-rigatoni-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Boil the rigatoni pasta with water and salt until done, then mix them with some olive oil and let them cool.</li>
+                        <li>Mix ground beef, salt, oregano, parsley, onion, garlic, and mozzarella together.</li>
+                        <li>Put the mixture in a freezer bag and squeeze it into the rigatoni.</li>
+                        <li>Freeze the rigatoni for 30 minutes.</li>
+                        <li>Coat the rigatoni with flour, eggs, and bread crumbs.</li>
+                        <li>Fry them with oil until golden brown.</li>
+                        <li>Enjoy your delicious stuffed rigatoni!</li>
+                    </ol>
+                    <button onclick="showIngredients('stuffed-rigatoni')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gnocchi Recipe -->
+        <div class="recipe-box" id="gnocchi">
+            <img src="HT-Gnocchi-From-Scratch-479.webp" alt="Gnocchi">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('gnocchi')">Gnocchi Recipe</a>
+                <div id="gnocchi-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>3-4 potatoes</li>
+                        <li>1 tsp salt</li>
+                        <li>1 tsp pepper</li>
+                        <li>1 egg</li>
+                        <li>1-1 1/2 cups flour</li>
+                        <li>Butter</li>
+                    </ul>
+                    <button onclick="showSteps('gnocchi')">See Steps</button>
+                </div>
+                <div id="gnocchi-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Boil the potatoes, peel them, then smash them. Add salt, pepper, and one egg, and mix them.</li>
+                        <li>Take the dough out of the bowl and add the flour, then knead it until it forms a dough.</li>
+                        <li>Shape the dough into desired shapes and boil them until they float.</li>
+                        <li>Fry them with butter, and they're done.</li>
+                    </ol>
+                    <button onclick="showIngredients('gnocchi')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Caesar Salad Recipe -->
+        <div class="recipe-box" id="caesar-salad">
+            <img src="caesar-salad-1-13.jpg" alt="Caesar Salad">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('caesar-salad')">Caesar Salad Recipe</a>
+                <div id="caesar-salad-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>4 tbsp olive oil</li>
+                        <li>3 garlic cloves (crushed)</li>
+                        <li>1 chicken breast</li>
+                        <li>3 tbsp butter</li>
+                        <li>1/2 cup mayonnaise</li>
+                        <li>1/4 cup parmesan cheese</li>
+                        <li>French baguette (1 or any other bread)</li>
+                        <li>1/2 head iceberg lettuce</li>
+                        <li>Salt to taste</li>
+                        <li>1-2 tsp pepper</li>
+                        <li>1/2 tsp oregano</li>
+                        <li>1/2 tsp thyme</li>
+                    </ul>
+                    <button onclick="showSteps('caesar-salad')">See Steps</button>
+                </div>
+                <div id="caesar-salad-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Heat olive oil and butter in a pan and cook the garlic until fragrant.</li>
+                        <li>Add the chicken breast and cook until fully cooked, then set aside and slice.</li>
+                        <li>Toast the French baguette (or any bread) in the pan, then cut it into crouton-sized pieces.</li>
+                        <li>Mix the mayonnaise, parmesan cheese, oregano, thyme, salt, and pepper in a bowl to make the dressing.</li>
+                        <li>Take the iceberg lettuce and tear it into bite-sized pieces, then place it in a bowl.</li>
+                        <li>Add the chicken, croutons, and dressing to the lettuce, and toss everything together.</li>
+                        <li>Enjoy your Caesar salad!</li>
+                    </ol>
+                    <button onclick="showIngredients('caesar-salad')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Garlic Parmesan Potato Wedges Recipe -->
+        <div class="recipe-box" id="garlic-parmesan-potato-wedges">
+            <img src="OIP (3).jpeg" alt="Garlic Parmesan Potato Wedges">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('garlic-parmesan-potato-wedges')">Garlic Parmesan Potato Wedges Recipe</a>
+                <div id="garlic-parmesan-potato-wedges-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>4 tbsp olive oil</li>
+                        <li>3 garlic cloves (crushed)</li>
+                        <li>1 chicken breast</li>
+                        <li>3 tbsp butter</li>
+                        <li>1/2 cup mayonnaise</li>
+                        <li>1/4 cup parmesan cheese</li>
+                        <li>French baguette (1 or any other bread)</li>
+                        <li>1/2 head iceberg lettuce</li>
+                        <li>Salt to taste</li>
+                        <li>1-2 tsp pepper</li>
+                        <li>1/2 tsp oregano</li>
+                        <li>1/2 tsp thyme</li>
+                    </ul>
+                    <button onclick="showSteps('garlic-parmesan-potato-wedges')">See Steps</button>
+                </div>
+                <div id="garlic-parmesan-potato-wedges-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Cut the potatoes into wedges and mix them with olive oil.</li>
+                        <li>Season with your choice of spices.</li>
+                        <li>Bake at 400°F / 200°C for 40 minutes until golden brown and crispy.</li>
+                        <li>Enjoy your garlic parmesan potato wedges!</li>
+                    </ol>
+                    <button onclick="showIngredients('garlic-parmesan-potato-wedges')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mandazi Recipe -->
+        <div class="recipe-box" id="mandazi">
+            <img src="Screenshot 2025-02-01 141801.png" alt="Mandazi">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('mandazi')">Mandazi Recipe</a>
+                <div id="mandazi-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>600g self-rising flour (or 600g all-purpose flour + 6 tsp baking powder)</li>
+                        <li>6 tbsp sugar</li>
+                        <li>1 tbsp soft butter</li>
+                        <li>2 eggs</li>
+                        <li>1 cup milk</li>
+                        <li>1-2 tbsp cinnamon powder</li>
+                    </ul>
+                    <button onclick="showSteps('mandazi')">See Steps</button>
+                </div>
+                <div id="mandazi-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Mix the flour, cinnamon, margarine (or butter), and sugar in a suitable bowl. Make sure the margarine is broken up into the flour.</li>
+                        <li>In a separate bowl, whisk the eggs into the milk. Make a well at the center of the flour and add the milk and egg mixture. Slowly mix to form a dough.</li>
+                        <li>Knead the dough for 3-4 minutes or until it stops sticking to the sides of the bowl and you have a smooth surface.</li>
+                        <li>Cover the dough with a damp cloth and allow it to rest for 15 minutes.</li>
+                        <li>Roll the dough on a lightly floured surface into a 1cm thick piece.</li>
+                        <li>Using a sharp knife, cut the dough into the desired size, setting it aside ready for deep frying.</li>
+                        <li>Heat oil in a suitable pot and gently dip the mandazi pieces to cook until light brown on the first side, then turn to cook on the second side.</li>
+                        <li>Serve them warm or cold.</li>
+                    </ol>
+                    <button onclick="showIngredients('mandazi')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showIngredients(recipeId) {
+            const ingredients = document.querySelector(`#${recipeId}-ingredients`);
+            const steps = document.querySelector(`#${recipeId}-steps`);
+            ingredients.style.display = 'block';
+            steps.style.display = 'none';
+        }
+
+        function showSteps(recipeId) {
+            const ingredients = document.querySelector(`#${recipeId}-ingredients`);
+            const steps = document.querySelector(`#${recipeId}-steps`);
+            ingredients.style.display = 'none';
+            steps.style.display = 'block';
+        }
+
+        function toggleRecipe(recipeId) {
+            const ingredients = document.querySelector(`#${recipeId}-ingredients`);
+            const steps = document.querySelector(`#${recipeId}-steps`);
+            if (ingredients.style.display === 'block' || steps.style.display === 'block') {
+                ingredients.style.display = 'none';
+                steps.style.display = 'none';
+            } else {
+                ingredients.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
