@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebcd;
+            text-align: center;
+        }
+        .header {
+            background-color: #f08080;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffcccb;
+            padding: 10px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #6a4f4b;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav a:hover {
+            color: #e74c3c;
+        }
+        .recipe-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            width: 90%;
+            max-width: 600px;
+            text-align: left;
+            margin: 10px auto;
+        }
+        .recipe-box img {
+            max-width: 120px;
+            max-height: 120px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .recipe-box a {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f08080;
+        }
+        .recipe-box a:hover {
+            color: #e74c3c;
+        }
+        .ingredients, .steps {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #f08080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e74c3c;
+        }
+        .recipe-video iframe {
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Refreshing Drinks</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="sweets.html">Sweets</a>
+        <a href="food.html">Food</a>
+        <a href="drinks.html">Drinks</a>
+    </div>
+    <div class="content">
+        <h1>Delicious Beverages</h1>
+        <p>Discover your favorite drink recipes.</p>
+
+        <!-- Mocha Frappuccino Recipe -->
+        <div class="recipe-box" id="mocha-frappuccino">
+            <img src="mocha.png" alt="Mocha Frappuccino">
+            <div>
+                <a href="javascript:void(0);" onclick="toggleRecipe('mocha-frappuccino')">Mocha Frappuccino</a>
+                <div id="mocha-frappuccino-ingredients" class="ingredients">
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>1 cup ice</li>
+                        <li>80ml of Nescafe</li>
+                        <li>1 cup milk</li>
+                        <li>1 tbsp sugar</li>
+                        <li>3 tbsp of chocolate syrup</li>
+                    </ul>
+                    <button onclick="showSteps('mocha-frappuccino')">See Steps</button>
+                </div>
+                <div id="mocha-frappuccino-steps" class="steps">
+                    <h2>Steps:</h2>
+                    <ol>
+                        <li>Mix all the ingredients together in a blender.</li>
+                        <li>Blend until smooth.</li>
+                        <li>Serve immediately and enjoy!</li>
+                    </ol>
+                    <button onclick="showIngredients('mocha-frappuccino')">Show Ingredients</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleRecipe(recipeId) {
+            let ingredients = document.getElementById(recipeId + '-ingredients');
+            let steps = document.getElementById(recipeId + '-steps');
+            if (ingredients.style.display === 'block') {
+                ingredients.style.display = 'none';
+                steps.style.display = 'none';
+            } else {
+                ingredients.style.display = 'block';
+                steps.style.display = 'none';
+            }
+        }
+
+        function showSteps(recipeId) {
+            let steps = document.getElementById(recipeId + '-steps');
+            let ingredients = document.getElementById(recipeId + '-ingredients');
+            ingredients.style.display = 'none';
+            steps.style.display = 'block';
+        }
+
+        function showIngredients(recipeId) {
+            let ingredients = document.getElementById(recipeId + '-ingredients');
+            let steps = document.getElementById(recipeId + '-steps');
+            steps.style.display = 'none';
+            ingredients.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
